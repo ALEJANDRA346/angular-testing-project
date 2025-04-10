@@ -1,1 +1,14 @@
-<p>task-list works!</p>
+
+<div class="task-item">
+  
+    @if (task.length == 0){
+        <p>No hay tareas aún.</p>
+    } @else {
+      @for (item of tasks; track task) {
+        <p> {{ task }} </p>
+      }
+      }
+    
+    <button (click)="deleteTask(tarea)">Eliminar</button>
+    <button (click)="updateTask(tarea)">Editar</button>
+  </div>
